@@ -63,7 +63,7 @@ MIT License. See LICENSE file for details.
 
 ---
 
-### 350-Word Project Description
+### Project Description
 This GitHub repository presents an end-to-end pipeline for Alzheimer's Disease (AD) detection from MRI images, combining advanced preprocessing with state-of-the-art deep learning models. Motivated by the need for accurate early diagnosis, it builds on the 2023 paper by Gharaibeh et al. on Swin Transformer-based segmentation but innovates by integrating SynthStrip for skull stripping, enhancing robustness and accuracy in real-world neuroimaging data.
 
 The core preprocessing script (`PreProcessing.py`) employs a tri-level approach: (1) Hybrid Kuan-Improved Frost (HKIF) filtering for noise reduction, preserving edges in 3D volumes; (2) Deep learning-based SynthStrip for precise skull stripping, outperforming traditional GAC methods; and (3) Expectation-Maximization (EM) via SimpleITK for bias field correction. It processes ADNI-style datasets organized into AD/MCI/CN subfolders, outputs `.nii` images and flattened/resized `.npy` vectors, and includes visualization of intermediate steps.
@@ -74,4 +74,3 @@ The second (`vit.py`) introduces an enhanced hybrid CNN-ViT architecture: a ResN
 
 Designed for researchers and clinicians, this pipeline is modular, reproducible (seeded randomness), and hardware-agnostic (CPU fallback). It processes all available ADNI scans without deduplication, maximizing data utilization. Future extensions could include federated learning or integration with Swin Transformers. Code is MIT-licensed, with citations to foundational works.
 
-(Word count: 350)
